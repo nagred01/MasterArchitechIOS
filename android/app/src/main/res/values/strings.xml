@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ArchitectReactNative</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">Loading Application, please wait</string>
+    <string name="title_activity_initialize_app">InitializeApp</string>
+    <string name="portal_url">http://192.168.1.200/UI</string>
+    <string name="debug_mode">false</string>
+</resources>
+

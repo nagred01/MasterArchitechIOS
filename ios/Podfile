@@ -1,0 +1,33 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, ‘9.0’
+
+target ‘ArchitectReactNative’ do
+ pod ‘yoga’, :path => ‘../node_modules/react-native/ReactCommon/yoga/yoga.podspec’
+ pod ‘Folly’, :podspec => ‘../node_modules/react-native/third-party-podspecs/Folly.podspec’
+ pod ‘React’, path: ‘../node_modules/react-native’, :subspecs => [
+ ‘Core’,
+ ‘CxxBridge’,
+ ‘DevSupport’,
+ ‘RCTActionSheet’,
+ ‘RCTAnimation’,
+ ‘RCTGeolocation’,
+ ‘RCTImage’,
+ ‘RCTLinkingIOS’,
+ ‘RCTNetwork’,
+ ‘RCTSettings’,
+ ‘RCTText’,
+ ‘RCTVibration’
+ ]
+ pod 'AFNetworking', '~> 2.5'
+end
+
+post_install do |installer|
+ installer.pods_project.targets.each do |target|
+   if target.name == “React”
+     target.remove_from_project
+   end
+   if target.name == “yoga”
+     target.remove_from_project
+   end
+ end
+end

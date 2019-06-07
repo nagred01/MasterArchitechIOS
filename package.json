@@ -1,0 +1,42 @@
+{
+  "name": "ArchitectReactNative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "clean": "cd android && gradlew clean && cd..",
+    "android": "react-native run-android",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "bundle-android": "react-native bundle --platform android --dev true --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "postinstall": "rndebugger-open --port 8081"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "7.4.4",
+    "@react-navigation/core": "^3.4.2",
+    "@react-navigation/native": "^3.1.1",
+    "create-react-class": "^15.6.3",
+    "immutability-helper": "^3.0.0",
+    "native-base": "2.12.1",
+    "react": "16.8.3",
+    "react-native": "^0.59.9",
+    "react-native-button": "^2.3.0",
+    "react-native-cross-platform-responsive-dimensions": "^0.8.11",
+    "react-native-device-info": "^0.24.3",
+    "react-native-gesture-handler": "1.0.12",
+    "react-native-iphone-x-helper": "^1.2.0",
+    "react-native-transitiongroup": "^1.2.0",
+    "react-native-vector-icons": "6.2.0",
+    "react-navigation": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-native-debugger-open": "^0.3.19",
+    "react-test-renderer": "^16.6.0-alpha.8af6728",
+    "reactotron-react-native": "^3.5.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
