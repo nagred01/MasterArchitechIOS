@@ -12,5 +12,5 @@
 
 +(void) dologin:(NSDictionary *)dictParameter withApiURL:(NSString *)strURL usingBlock:(void(^)(NSString *error,NSDictionary *response))block;
 
-+(void)accountSummerywithToken:(NSString *)strToken usingBlock:(void(^)(NSString *error,NSDictionary *response))block;
++(void)accountSummerywithToken:(NSString *)strToken usingBlock:(void(^)(NSString *error,NSString *response))block;
 @end

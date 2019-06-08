@@ -29,7 +29,7 @@
   }];
   
 }
-+(void)accountSummerywithToken:(NSString *)strToken usingBlock:(void(^)(NSString *error,NSDictionary *response))block {
++(void)accountSummerywithToken:(NSString *)strToken usingBlock:(void(^)(NSString *error,NSString *response))block {
   
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -40,10 +40,12 @@
   
   [manager GET:@"http://192.168.1.48/UI/api/Native/Config?pageName=Accounts%2FAccountSummary"
     parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-      NSLog(@"JSON: %@", responseObject);
+      //NSLog(@"JSON: %@", responseObject);
       
-      NSLog(@"%@",responseObject);
-      block(@"",responseObject);
+      NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+      
+     // NSLog(@"%@",responseObject);
+      block(@"",string);
       
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
       NSLog(@"Error: %@", error);

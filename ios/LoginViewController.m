@@ -67,11 +67,11 @@
     
     if ([response count] > 0) {
     
-      [HttpServiceHealper accountSummerywithToken:[response valueForKey:@"antiForgeryToken"] usingBlock:^(NSString *error, NSDictionary *responsedict) {
+      [HttpServiceHealper accountSummerywithToken:[response valueForKey:@"antiForgeryToken"] usingBlock:^(NSString *error, NSString *responsstr) {
         
-        if ([responsedict count] > 0) {
+        if ([responsstr length] > 0) {
           
-          NSString *string = [[NSString alloc] initWithData:responsedict encoding:NSUTF8StringEncoding];
+          NSString *string = responsstr;
           NSLog(@"str: %@", string);
           NSString *path = [[self applicationDocumentsDirectory].path
                             stringByAppendingPathComponent:@"index.js"];

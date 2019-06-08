@@ -50,9 +50,9 @@
 		6BA85292034E450EB5BCB9E7 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D999FAD7983C489E992B261F /* Entypo.ttf */; };
 		6EF2086FDD394ACBB57F6ABA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F249F3A1E2F44F98FC8779A /* Zocial.ttf */; };
 		72824BBE22A9113B00310113 /* Portal.m in Sources */ = {isa = PBXBuildFile; fileRef = 72824BBD22A9113B00310113 /* Portal.m */; };
-		72824C2A22A9B80B00310113 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 72824BFC22A9B80900310113 /* assets */; };
 		72824C2B22A9B80B00310113 /* index.ios.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72824C2922A9B80A00310113 /* index.ios.bundle */; };
-		72824C2C22A9BF7100310113 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
+		72824D2122AC30C600310113 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 72824D2022AC30C600310113 /* main.jsbundle */; };
+		72824D2322AC320000310113 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 72824D2222AC31FF00310113 /* assets */; };
 		72BF11EC22A21CE800828C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72BF11EA22A21CE700828C47 /* Main.storyboard */; };
 		746CBE420630457E807A3472 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C856674177E455BA013D894 /* libRNDeviceInfo-tvOS.a */; };
 		7C7263090B0F49D38C30E39B /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B95967CC414995A035D2B4 /* Feather.ttf */; };
@@ -396,7 +396,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
 		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
@@ -447,8 +446,9 @@
 		6DC314904BD14403B5949D58 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		6DF9EF43828D428E84618F0E /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		72824BBD22A9113B00310113 /* Portal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Portal.m; sourceTree = "<group>"; };
-		72824BFC22A9B80900310113 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		72824C2922A9B80A00310113 /* index.ios.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.bundle; sourceTree = "<group>"; };
+		72824D2022AC30C600310113 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		72824D2222AC31FF00310113 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		72BF11EA22A21CE700828C47 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		74CA998CE41B4163A43B06DB /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -651,10 +651,10 @@
 		13B07FAE1A68108700A75B9A /* ArchitectReactNative */ = {
 			isa = PBXGroup;
 			children = (
-				72824BFC22A9B80900310113 /* assets */,
+				72824D2222AC31FF00310113 /* assets */,
 				72824C2922A9B80A00310113 /* index.ios.bundle */,
 				72BF11EA22A21CE700828C47 /* Main.storyboard */,
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				72824D2022AC30C600310113 /* main.jsbundle */,
 				2161DB4322AAE37B00A8FBF9 /* LoginVC.h */,
 				2161DB4222AAE37B00A8FBF9 /* LoginVC.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -1384,7 +1384,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72824C2C22A9BF7100310113 /* main.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				C31FBD219D27462C8B3122CB /* AntDesign.ttf in Resources */,
@@ -1394,10 +1393,11 @@
 				7FD86DBE6E9C420DA9A45021 /* FontAwesome.ttf in Resources */,
 				AC4B0A20AFEB4D5FB9E5387B /* FontAwesome5_Brands.ttf in Resources */,
 				037C47B3AA1041D983B7BB0A /* FontAwesome5_Regular.ttf in Resources */,
+				72824D2322AC320000310113 /* assets in Resources */,
 				72824C2B22A9B80B00310113 /* index.ios.bundle in Resources */,
 				04F103F6C9FE4052BBF6ECDC /* FontAwesome5_Solid.ttf in Resources */,
 				17F5079C1E8A4631A5B675D2 /* Foundation.ttf in Resources */,
-				72824C2A22A9B80B00310113 /* assets in Resources */,
+				72824D2122AC30C600310113 /* main.jsbundle in Resources */,
 				2FCA69ED5F7C4F59A9AC1B12 /* Ionicons.ttf in Resources */,
 				2EDF40E6A94843C2882C8A50 /* MaterialCommunityIcons.ttf in Resources */,
 				2A3A3E7C6B424A2CAEAA85BE /* MaterialIcons.ttf in Resources */,
