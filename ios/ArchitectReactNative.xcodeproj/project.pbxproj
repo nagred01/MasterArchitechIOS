@@ -28,7 +28,8 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		17F5079C1E8A4631A5B675D2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB13B916D3A43D5A6C3D5FD /* Foundation.ttf */; };
 		2161DB4422AAE37B00A8FBF9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2161DB4222AAE37B00A8FBF9 /* LoginVC.m */; };
-		2161DB4722AAE39F00A8FBF9 /* HttpServiceHealper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2161DB4622AAE39F00A8FBF9 /* HttpServiceHealper.m */; };
+		2182F12A22ABF0F800662A1C /* HttpServiceHealper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2182F12922ABF0F800662A1C /* HttpServiceHealper.m */; };
+		2182F12D22ABFBEC00662A1C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2182F12C22ABFBEC00662A1C /* LoginViewController.m */; };
 		2A3A3E7C6B424A2CAEAA85BE /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBABB28BC3904DE598815143 /* MaterialIcons.ttf */; };
 		2B73C3ABFE9D4D799554E86B /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 034E12B46E88468CB8203FAB /* libRNVectorIcons.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -424,8 +425,10 @@
 		1E22FBEC4289083795CE39A6 /* libPods-ArchitectReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArchitectReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2161DB4222AAE37B00A8FBF9 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		2161DB4322AAE37B00A8FBF9 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		2161DB4522AAE39E00A8FBF9 /* HttpServiceHealper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpServiceHealper.h; sourceTree = "<group>"; };
-		2161DB4622AAE39F00A8FBF9 /* HttpServiceHealper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpServiceHealper.m; sourceTree = "<group>"; };
+		2182F12822ABF0F800662A1C /* HttpServiceHealper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpServiceHealper.h; sourceTree = "<group>"; };
+		2182F12922ABF0F800662A1C /* HttpServiceHealper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpServiceHealper.m; sourceTree = "<group>"; };
+		2182F12B22ABFBEC00662A1C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2182F12C22ABFBEC00662A1C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		21CADCD50CB84A83B6B53B53 /* react-native-evalTests.xctest */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "react-native-evalTests.xctest"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ArchitectReactNative-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArchitectReactNative-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ArchitectReactNative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArchitectReactNative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -653,8 +656,6 @@
 				72BF11EA22A21CE700828C47 /* Main.storyboard */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				2161DB4322AAE37B00A8FBF9 /* LoginVC.h */,
-				2161DB4522AAE39E00A8FBF9 /* HttpServiceHealper.h */,
-				2161DB4622AAE39F00A8FBF9 /* HttpServiceHealper.m */,
 				2161DB4222AAE37B00A8FBF9 /* LoginVC.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -663,6 +664,10 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				72824BBD22A9113B00310113 /* Portal.m */,
+				2182F12822ABF0F800662A1C /* HttpServiceHealper.h */,
+				2182F12922ABF0F800662A1C /* HttpServiceHealper.m */,
+				2182F12B22ABFBEC00662A1C /* LoginViewController.h */,
+				2182F12C22ABFBEC00662A1C /* LoginViewController.m */,
 			);
 			name = ArchitectReactNative;
 			sourceTree = "<group>";
@@ -1488,9 +1493,10 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				72824BBE22A9113B00310113 /* Portal.m in Sources */,
+				2182F12D22ABFBEC00662A1C /* LoginViewController.m in Sources */,
 				2161DB4422AAE37B00A8FBF9 /* LoginVC.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				2161DB4722AAE39F00A8FBF9 /* HttpServiceHealper.m in Sources */,
+				2182F12A22ABF0F800662A1C /* HttpServiceHealper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

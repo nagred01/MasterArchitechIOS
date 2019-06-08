@@ -14,6 +14,7 @@
 #import <AFNetworking.h>
 #import <Availability.h>
 #import <AFHTTPSessionManager.h>
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -23,7 +24,7 @@
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   
-  LoginVC *loginController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginVC"]; //or the homeController
+  LoginViewController *loginController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginViewController"]; //or the homeController
   
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:loginController];
     self.window.rootViewController = navController;
