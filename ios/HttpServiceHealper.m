@@ -72,12 +72,15 @@ NSString *strUserAgent = @"Mobile IOS 18.1;Mozilla/5.0 (iPhone; CPU iPhone OS 11
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   manager.responseSerializer = [AFHTTPResponseSerializer serializer];
   
-  [manager.requestSerializer setValue:strToken forHTTPHeaderField:@"X-CSRF-TOKEN"];
+ 
   [manager.requestSerializer setValue:strUserAgent forHTTPHeaderField:@"User-Agent"];
   NSString *strLoginToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"loginToken"];
-  if ([strLoginToken length]>0) {
-    [manager.requestSerializer setValue:strLoginToken forHTTPHeaderField:@"X-Request-Token"];
+  [manager.requestSerializer setValue:strLoginToken forHTTPHeaderField:@"X-CSRF-TOKEN"];
+  if ([strToken length]>0) {
+    [manager.requestSerializer setValue:strToken forHTTPHeaderField:@"X-Request-Token"];
   }
+ 
+  
  
   [manager GET:strBaseURL
     parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {

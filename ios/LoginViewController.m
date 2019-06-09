@@ -50,8 +50,6 @@
  
   NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
   [defaults setObject:strServrIp forKey:@"baseURL"];
-  [defaults setBool:self.btnenabledevMode.isSelected forKey:@"davMode"];
-  [defaults setBool:self.btnDownloadbundel.isSelected forKey:@"bundel"];
   [defaults synchronize];
   
   NSString *mPortalBase = [NSString stringWithFormat:@"%@%@",@"http://",strServrIp];
@@ -116,38 +114,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+  [defaults setObject:@"no" forKey:@"davMode"];
+  [defaults setObject:@"no" forKey:@"bundel"];
+  [defaults synchronize];
+
     // Do any additional setup after loading the view.
 }
 
 
 - (IBAction)devMode:(UIButton *)sender {
+  self.btnenabledevMode.selected = !self.btnenabledevMode.selected;
+  NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
   
   if(sender.isSelected) {
     [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
+  
+    [defaults setObject:@"yes" forKey:@"davMode"];
   }else {
     [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
+    
+    [defaults setObject:@"no" forKey:@"davMode"];
   }
-  
-  self.btnenabledevMode.selected = !self.btnenabledevMode.selected;
-  NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-  [defaults setBool:self.btnenabledevMode.isSelected forKey:@"davMode"];
   [defaults synchronize];
 
 }
 
 - (IBAction)downloadBundle:(UIButton *)sender {
-  
-  if(sender.isSelected) {
-    [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
-  }else {
-    [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
-  }
-  
   self.btnDownloadbundel.selected = !self.btnDownloadbundel.selected;
   NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-  [defaults setBool:self.btnDownloadbundel.isSelected forKey:@"bundel"];
+  if(sender.isSelected) {
+    [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
+ 
+    [defaults setObject:@"yes" forKey:@"bundel"];
+  }else {
+    [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
+  
+        [defaults setObject:@"no" forKey:@"bundel"];
+  }
   [defaults synchronize];
-
 }
 
 

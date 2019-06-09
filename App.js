@@ -6,8 +6,8 @@ import styles from './styles';
 global.styles = styles;
 this.styles = styles;
 import { NativeModules } from "react-native";
-const { NativeHttpService } = NativeModules;
-
+// const { NativeHttpService } = NativeModules;
+const NativeHttpService = require('NativeModules').NativeHttpService
 const devBaseUrl = "http://192.168.1.48/UI";
 export default class App extends Component {
 
@@ -15,7 +15,11 @@ export default class App extends Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentDidMount() { 
+    NativeHttpService.isdebug().then(result => {
+      console.log('NativeHttpService.isdebug',result)
+    })
+    //NativeHttpService.isdebug((res)=> console.log('NativeHttpService',res))
     NativeHttpService.isdebug().then(result => {
       if (result === true || result === "true") {
         NativeHttpService.get("/UI/api/Native/bundle",null)
