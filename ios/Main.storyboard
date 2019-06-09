@@ -75,25 +75,29 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-fR-be0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-fR-be0">
                                         <rect key="frame" x="10" y="265" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="6Tz-Zd-2xw"/>
                                         </constraints>
-                                        <state key="normal" title="Enable Dev Mode ?">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Enable Dev Mode ?" image="uncheck-mark">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="devMode:" destination="p6W-Ay-Cye" eventType="touchUpInside" id="HeB-Ik-phz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxT-zg-cug">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxT-zg-cug">
                                         <rect key="frame" x="10" y="315" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Zcx-iA-KLi"/>
                                             <constraint firstAttribute="height" constant="40" id="unu-CU-HQE"/>
                                         </constraints>
-                                        <state key="normal" title="Download Fresh Bundle ?">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Download Fresh Bundle ?" image="uncheck-mark">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -198,5 +202,6 @@
     </scenes>
     <resources>
         <image name="top_img" width="287" height="169"/>
+        <image name="uncheck-mark" width="40" height="40"/>
     </resources>
 </document>

@@ -34,6 +34,7 @@ import javax.annotation.Nullable;
 public class NativeHttpService extends ReactContextBaseJavaModule {
     static HttpService httpService;
     private final ReactApplicationContext _reactContext;
+
     public NativeHttpService(ReactApplicationContext reactContext) {
         super(reactContext);
         httpService = HttpService.GetInstance();

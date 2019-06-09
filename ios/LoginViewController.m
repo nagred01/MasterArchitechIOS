@@ -53,7 +53,7 @@
   [defaults setBool:self.btnenabledevMode.isSelected forKey:@"davMode"];
   [defaults setBool:self.btnDownloadbundel.isSelected forKey:@"bundel"];
   [defaults synchronize];
-
+  
   NSString *mPortalBase = [NSString stringWithFormat:@"%@%@",@"http://",strServrIp];
   NSString *loginEndpoint = @"/UI/api/Authentication/Login";
   
@@ -67,6 +67,8 @@
     
     if ([response count] > 0) {
     
+      [[NSUserDefaults standardUserDefaults] setObject:[response valueForKey:@"antiForgeryToken"] forKey:@"loginToken"];
+      
       [HttpServiceHealper accountSummerywithToken:[response valueForKey:@"antiForgeryToken"] usingBlock:^(NSString *error, NSString *responsstr) {
         
         if ([responsstr length] > 0) {
@@ -118,7 +120,14 @@
 }
 
 
-- (IBAction)devMode:(id)sender {
+- (IBAction)devMode:(UIButton *)sender {
+  
+  if(sender.isSelected) {
+    [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
+  }else {
+    [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
+  }
+  
   self.btnenabledevMode.selected = !self.btnenabledevMode.selected;
   NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
   [defaults setBool:self.btnenabledevMode.isSelected forKey:@"davMode"];
@@ -126,7 +135,14 @@
 
 }
 
-- (IBAction)downloadBundle:(id)sender {
+- (IBAction)downloadBundle:(UIButton *)sender {
+  
+  if(sender.isSelected) {
+    [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
+  }else {
+    [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
+  }
+  
   self.btnDownloadbundel.selected = !self.btnDownloadbundel.selected;
   NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
   [defaults setBool:self.btnDownloadbundel.isSelected forKey:@"bundel"];

@@ -30,6 +30,7 @@
 		2161DB4422AAE37B00A8FBF9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2161DB4222AAE37B00A8FBF9 /* LoginVC.m */; };
 		2182F12A22ABF0F800662A1C /* HttpServiceHealper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2182F12922ABF0F800662A1C /* HttpServiceHealper.m */; };
 		2182F12D22ABFBEC00662A1C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2182F12C22ABFBEC00662A1C /* LoginViewController.m */; };
+		21F8159722AD47B700F4BEBF /* NativeHttpService.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8156922AD47B600F4BEBF /* NativeHttpService.m */; };
 		2A3A3E7C6B424A2CAEAA85BE /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBABB28BC3904DE598815143 /* MaterialIcons.ttf */; };
 		2B73C3ABFE9D4D799554E86B /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 034E12B46E88468CB8203FAB /* libRNVectorIcons.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -429,6 +430,8 @@
 		2182F12B22ABFBEC00662A1C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2182F12C22ABFBEC00662A1C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		21CADCD50CB84A83B6B53B53 /* react-native-evalTests.xctest */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "react-native-evalTests.xctest"; sourceTree = "<group>"; };
+		21F8156922AD47B600F4BEBF /* NativeHttpService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeHttpService.m; sourceTree = "<group>"; };
+		21F8159622AD47B600F4BEBF /* NativeHttpService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeHttpService.h; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ArchitectReactNative-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArchitectReactNative-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ArchitectReactNative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArchitectReactNative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -651,6 +654,8 @@
 		13B07FAE1A68108700A75B9A /* ArchitectReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				21F8159622AD47B600F4BEBF /* NativeHttpService.h */,
+				21F8156922AD47B600F4BEBF /* NativeHttpService.m */,
 				72824D2222AC31FF00310113 /* assets */,
 				72824C2922A9B80A00310113 /* index.ios.bundle */,
 				72BF11EA22A21CE700828C47 /* Main.storyboard */,
@@ -1497,6 +1502,7 @@
 				2161DB4422AAE37B00A8FBF9 /* LoginVC.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				2182F12A22ABF0F800662A1C /* HttpServiceHealper.m in Sources */,
+				21F8159722AD47B700F4BEBF /* NativeHttpService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,7 +1641,10 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-eval/react-native-eval",
-					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-gesture-handlerios/**",
+					"$(SRCROOT)/../node_modules/react-native/React/Base",
 				);
 				INFOPLIST_FILE = ArchitectReactNative/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1667,7 +1676,10 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-eval/react-native-eval",
-					"$(SRCROOT)..\node_modules\neact-native-gesture-handlerios/**",
+					"$(SRCROOT)..",
+					ode_modules,
+					"eact-native-gesture-handlerios/**",
+					"$(SRCROOT)/../node_modules/react-native/React/Base",
 				);
 				INFOPLIST_FILE = ArchitectReactNative/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
