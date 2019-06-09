@@ -95,5 +95,35 @@ NSString *strUserAgent = @"Mobile IOS 18.1;Mozilla/5.0 (iPhone; CPU iPhone OS 11
 }
 
 
++(void)post:(NSString *)strToken withURL:(NSString *)strURL usingBlock:(void(^)(NSString *error,NSDictionary *response))block {
+  
+  
+  NSString *strBaseURL = [NSString stringWithFormat:@"http://%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"baseURL"]];
+  strBaseURL = [strBaseURL stringByAppendingString:strURL];
+  
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+  
+  [manager.requestSerializer setValue:strToken forHTTPHeaderField:@"X-CSRF-TOKEN"];
+  [manager.requestSerializer setValue:strUserAgent forHTTPHeaderField:@"User-Agent"];
+  NSString *strLoginToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"loginToken"];
+  if ([strLoginToken length]>0) {
+    [manager.requestSerializer setValue:strLoginToken forHTTPHeaderField:@"X-Request-Token"];
+  }
+  
+  [manager POST:strBaseURL
+    parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      //NSLog(@"JSON: %@", responseObject);
+      
+     // NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+      
+      // NSLog(@"%@",responseObject);
+      block(@"",responseObject);
+      
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+      NSLog(@"Error: %@", error);
+    }];
+  
+}
 
 @end
