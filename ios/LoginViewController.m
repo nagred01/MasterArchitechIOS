@@ -1,11 +1,3 @@
-//
-//  LoginViewController.m
-//  ArchitectReactNative
-//
-//  Created by Hiren Vaghela on 08/06/19.
-//  Copyright © 2019 Facebook. All rights reserved.
-//
-
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 #import <React/RCTBridge.h>
@@ -16,16 +8,13 @@
 #import <AFHTTPSessionManager.h>
 #import "HttpServiceHealper.h"
 
-
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate>
 
 @end
 
 @implementation LoginViewController
 
 #define _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_ 1
-
-
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
@@ -113,16 +102,25 @@
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  
+  [super viewDidLoad];
+  self.txtloginname.delegate = self;
+  self.txtpassword.delegate = self;
+  self.txtserverIP.delegate = self;
   NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-  [defaults setObject:@"no" forKey:@"davMode"];
-  [defaults setObject:@"no" forKey:@"bundel"];
+  [defaults setObject:@"no" forKey:@"devMode"];
+  [defaults setObject:@"no" forKey:@"bundle"];
   [defaults synchronize];
+  
+ 
 
     // Do any additional setup after loading the view.
 }
 
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+  [textField resignFirstResponder];
+  return YES;
+}
 - (IBAction)devMode:(UIButton *)sender {
   self.btnenabledevMode.selected = !self.btnenabledevMode.selected;
   NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
@@ -130,11 +128,11 @@
   if(sender.isSelected) {
     [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
   
-    [defaults setObject:@"yes" forKey:@"davMode"];
+    [defaults setObject:@"yes" forKey:@"devMode"];
   }else {
     [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
     
-    [defaults setObject:@"no" forKey:@"davMode"];
+    [defaults setObject:@"no" forKey:@"devMode"];
   }
   [defaults synchronize];
 
@@ -146,11 +144,11 @@
   if(sender.isSelected) {
     [sender setImage:[UIImage imageNamed:@"check-mark"] forState:UIControlStateNormal];
  
-    [defaults setObject:@"yes" forKey:@"bundel"];
+    [defaults setObject:@"yes" forKey:@"bundle"];
   }else {
     [sender setImage:[UIImage imageNamed:@"uncheck-mark"] forState:UIControlStateNormal];
   
-        [defaults setObject:@"no" forKey:@"bundel"];
+        [defaults setObject:@"no" forKey:@"bundle"];
   }
   [defaults synchronize];
 }

@@ -1,11 +1,3 @@
-//
-//  HttpServiceHealper.m
-//  ArchitectReactNative
-//
-//  Created by Hiren Vaghela on 08/06/19.
-//  Copyright © 2019 Facebook. All rights reserved.
-//
-
 #import "HttpServiceHealper.h"
 #import <AFNetworking.h>
 #import <AFHTTPSessionManager.h>

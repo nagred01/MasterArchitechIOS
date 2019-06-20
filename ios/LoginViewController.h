@@ -1,11 +1,3 @@
-//
-//  LoginViewController.h
-//  ArchitectReactNative
-//
-//  Created by Hiren Vaghela on 08/06/19.
-//  Copyright © 2019 Facebook. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <React/RCTBridgeDelegate.h>
 
