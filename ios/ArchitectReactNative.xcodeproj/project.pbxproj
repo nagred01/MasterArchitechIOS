@@ -27,7 +27,6 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		17F5079C1E8A4631A5B675D2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BB13B916D3A43D5A6C3D5FD /* Foundation.ttf */; };
-		2161DB4422AAE37B00A8FBF9 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2161DB4222AAE37B00A8FBF9 /* LoginVC.m */; };
 		2182F12A22ABF0F800662A1C /* HttpServiceHealper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2182F12922ABF0F800662A1C /* HttpServiceHealper.m */; };
 		2182F12D22ABFBEC00662A1C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2182F12C22ABFBEC00662A1C /* LoginViewController.m */; };
 		21F8159722AD47B700F4BEBF /* NativeHttpService.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F8156922AD47B600F4BEBF /* NativeHttpService.m */; };
@@ -50,10 +49,7 @@
 		2FCA69ED5F7C4F59A9AC1B12 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34CA07A4428C4563B38480BE /* Ionicons.ttf */; };
 		6BA85292034E450EB5BCB9E7 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D999FAD7983C489E992B261F /* Entypo.ttf */; };
 		6EF2086FDD394ACBB57F6ABA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F249F3A1E2F44F98FC8779A /* Zocial.ttf */; };
-		72824BBE22A9113B00310113 /* Portal.m in Sources */ = {isa = PBXBuildFile; fileRef = 72824BBD22A9113B00310113 /* Portal.m */; };
 		72824C2B22A9B80B00310113 /* index.ios.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72824C2922A9B80A00310113 /* index.ios.bundle */; };
-		72824D2122AC30C600310113 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 72824D2022AC30C600310113 /* main.jsbundle */; };
-		72824D2322AC320000310113 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 72824D2222AC31FF00310113 /* assets */; };
 		72BF11EC22A21CE800828C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72BF11EA22A21CE700828C47 /* Main.storyboard */; };
 		746CBE420630457E807A3472 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C856674177E455BA013D894 /* libRNDeviceInfo-tvOS.a */; };
 		7C7263090B0F49D38C30E39B /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B95967CC414995A035D2B4 /* Feather.ttf */; };
@@ -61,6 +57,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A6697B6EEF84C17A06CEB46 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC10DFB5EF63473B8A166966 /* libRNGestureHandler.a */; };
 		8F5D6FF5E3FA4D0C807A7434 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC314904BD14403B5949D58 /* Octicons.ttf */; };
+		907FCE9822BCD6D5002C47A8 /* Portal.m in Sources */ = {isa = PBXBuildFile; fileRef = 907FCE9722BCD6D5002C47A8 /* Portal.m */; };
+		907FCE9B22BCD6EE002C47A8 /* IOHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 907FCE9A22BCD6EE002C47A8 /* IOHelper.m */; };
 		AC4B0A20AFEB4D5FB9E5387B /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD47BF8CC8C84E1CB8F16386 /* FontAwesome5_Brands.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B6E378949DD746C8B160F797 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 320646F3EA954EB5AECDC590 /* EvilIcons.ttf */; };
@@ -423,8 +421,6 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		17364B7D4C054CE8AF34ED1F /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		1E22FBEC4289083795CE39A6 /* libPods-ArchitectReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArchitectReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2161DB4222AAE37B00A8FBF9 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		2161DB4322AAE37B00A8FBF9 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		2182F12822ABF0F800662A1C /* HttpServiceHealper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpServiceHealper.h; sourceTree = "<group>"; };
 		2182F12922ABF0F800662A1C /* HttpServiceHealper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpServiceHealper.m; sourceTree = "<group>"; };
 		2182F12B22ABFBEC00662A1C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -448,9 +444,7 @@
 		6BB13B916D3A43D5A6C3D5FD /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		6DC314904BD14403B5949D58 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		6DF9EF43828D428E84618F0E /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
-		72824BBD22A9113B00310113 /* Portal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Portal.m; sourceTree = "<group>"; };
 		72824C2922A9B80A00310113 /* index.ios.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.bundle; sourceTree = "<group>"; };
-		72824D2022AC30C600310113 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		72824D2222AC31FF00310113 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		72BF11EA22A21CE700828C47 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		74CA998CE41B4163A43B06DB /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -461,6 +455,10 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		86A3265907F2558A3D9536B3 /* Pods-ArchitectReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectReactNative.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArchitectReactNative/Pods-ArchitectReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 		903E481ED90242FC83E27F2C /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		907FCE9622BCD6D5002C47A8 /* Portal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Portal.h; path = ArchitectReactNative/Portal.h; sourceTree = "<group>"; };
+		907FCE9722BCD6D5002C47A8 /* Portal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Portal.m; path = ArchitectReactNative/Portal.m; sourceTree = "<group>"; };
+		907FCE9922BCD6EE002C47A8 /* IOHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IOHelper.h; path = ArchitectReactNative/IOHelper.h; sourceTree = "<group>"; };
+		907FCE9A22BCD6EE002C47A8 /* IOHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IOHelper.m; path = ArchitectReactNative/IOHelper.m; sourceTree = "<group>"; };
 		94E1087BA04D4BA982A9D98C /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		99B95967CC414995A035D2B4 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		A18E07B6ACAF4EDBB653B942 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
@@ -659,20 +657,20 @@
 				72824D2222AC31FF00310113 /* assets */,
 				72824C2922A9B80A00310113 /* index.ios.bundle */,
 				72BF11EA22A21CE700828C47 /* Main.storyboard */,
-				72824D2022AC30C600310113 /* main.jsbundle */,
-				2161DB4322AAE37B00A8FBF9 /* LoginVC.h */,
-				2161DB4222AAE37B00A8FBF9 /* LoginVC.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				72824BBD22A9113B00310113 /* Portal.m */,
 				2182F12822ABF0F800662A1C /* HttpServiceHealper.h */,
 				2182F12922ABF0F800662A1C /* HttpServiceHealper.m */,
 				2182F12B22ABFBEC00662A1C /* LoginViewController.h */,
 				2182F12C22ABFBEC00662A1C /* LoginViewController.m */,
+				907FCE9622BCD6D5002C47A8 /* Portal.h */,
+				907FCE9722BCD6D5002C47A8 /* Portal.m */,
+				907FCE9922BCD6EE002C47A8 /* IOHelper.h */,
+				907FCE9A22BCD6EE002C47A8 /* IOHelper.m */,
 			);
 			name = ArchitectReactNative;
 			sourceTree = "<group>";
@@ -1398,11 +1396,9 @@
 				7FD86DBE6E9C420DA9A45021 /* FontAwesome.ttf in Resources */,
 				AC4B0A20AFEB4D5FB9E5387B /* FontAwesome5_Brands.ttf in Resources */,
 				037C47B3AA1041D983B7BB0A /* FontAwesome5_Regular.ttf in Resources */,
-				72824D2322AC320000310113 /* assets in Resources */,
 				72824C2B22A9B80B00310113 /* index.ios.bundle in Resources */,
 				04F103F6C9FE4052BBF6ECDC /* FontAwesome5_Solid.ttf in Resources */,
 				17F5079C1E8A4631A5B675D2 /* Foundation.ttf in Resources */,
-				72824D2122AC30C600310113 /* main.jsbundle in Resources */,
 				2FCA69ED5F7C4F59A9AC1B12 /* Ionicons.ttf in Resources */,
 				2EDF40E6A94843C2882C8A50 /* MaterialCommunityIcons.ttf in Resources */,
 				2A3A3E7C6B424A2CAEAA85BE /* MaterialIcons.ttf in Resources */,
@@ -1496,11 +1492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907FCE9822BCD6D5002C47A8 /* Portal.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				72824BBE22A9113B00310113 /* Portal.m in Sources */,
 				2182F12D22ABFBEC00662A1C /* LoginViewController.m in Sources */,
-				2161DB4422AAE37B00A8FBF9 /* LoginVC.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				907FCE9B22BCD6EE002C47A8 /* IOHelper.m in Sources */,
 				2182F12A22ABF0F800662A1C /* HttpServiceHealper.m in Sources */,
 				21F8159722AD47B700F4BEBF /* NativeHttpService.m in Sources */,
 			);
@@ -1642,7 +1638,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-eval/react-native-eval",
 					"$(SRCROOT)..",
-					ode_modules,
+					node_modules,
 					"eact-native-gesture-handlerios/**",
 					"$(SRCROOT)/../node_modules/react-native/React/Base",
 				);
@@ -1677,7 +1673,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-eval/react-native-eval",
 					"$(SRCROOT)..",
-					ode_modules,
+					node_modules,
 					"eact-native-gesture-handlerios/**",
 					"$(SRCROOT)/../node_modules/react-native/React/Base",
 				);
