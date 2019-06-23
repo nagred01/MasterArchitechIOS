@@ -1,9 +1,8 @@
 #import <Foundation/Foundation.h>
 
-@interface HttpServiceHealper : NSObject
+@interface HttpService : NSObject
 
 +(void) dologin:(NSDictionary *)dictParameter withApiURL:(NSString *)strURL usingBlock:(void(^)(NSString *error,NSDictionary *response))block;
-+(void) portalLogin:(NSDictionary *)dictParameter usingBlock:(void(^)(NSString *error,NSDictionary *response))block;
 
 +(void)accountSummerywithToken:(NSString *)strToken usingBlock:(void(^)(NSString *error,NSString *response))block;
 
