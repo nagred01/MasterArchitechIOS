@@ -1,5 +1,5 @@
 #import "LoginViewController.h"
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -47,6 +47,25 @@
   
 }
 
+-(void)finalStep{
+  NSString *string;
+  if(self.btnenabledevMode.isSelected){
+    string = [IOHelper readFromFile:(@"index")];
+  }else{
+    string = [IOHelper readFromFile:(@"index.ios.bundle")];
+  }
+  NSString *path = [[self applicationDocumentsDirectory].path
+                    stringByAppendingPathComponent:@"index.js"];
+  [string writeToFile:path atomically:YES
+             encoding:NSUTF8StringEncoding error:nil];
+  
+  
+  NSURL *fileURL = [[NSURL alloc] initWithString:path];
+  
+  AppDelegate *appDelegate = (AppDelegate*)(UIApplication.sharedApplication.delegate);
+  [appDelegate gotoReactNativePage:fileURL];
+}
+
 - (IBAction)ActionLogin:(id)sender {
   
   NSString *strUsername = self.txtloginname.text ;
@@ -68,19 +87,11 @@
   
   [HttpServiceHealper portalLogin:parameters usingBlock:^(NSString *error, NSDictionary *response) {
     if (self.btnenabledevMode.isSelected){
-//      NSString *string = responsstr;
-//      NSString *path = [[self applicationDocumentsDirectory].path
-//                        stringByAppendingPathComponent:@"index.js"];
-//      [string writeToFile:path atomically:YES
-//                 encoding:NSUTF8StringEncoding error:nil];
-//
-//
-//      NSURL *fileURL = [[NSURL alloc] initWithString:path];
-//
-//      AppDelegate *appDelegate = (AppDelegate*)(UIApplication.sharedApplication.delegate);
-//      [appDelegate gotoReactNativePage:fileURL];
+      [self finalStep];
     }else{
       [Portal doExecute];
+      [self saveFile];
+      [self finalStep];
     }
     
     
