@@ -49,10 +49,11 @@
 
 -(void)finalStep{
   NSString *string;
+  NSMutableString *strBundle;
   if(self.btnenabledevMode.isSelected){
-    string = [IOHelper readFromFile:(@"index")];
+    strBundle = [[NSMutableString alloc] initWithString:[IOHelper readFromFile:(@"index")]];
   }else{
-    string = [IOHelper readFromFile:(@"index.ios.bundle")];
+    strBundle = [[NSMutableString alloc] initWithString:[IOHelper readFromFile:(@"index.ios.bundle")]];
   }
   NSString *path = [[self applicationDocumentsDirectory].path
                     stringByAppendingPathComponent:@"index.js"];

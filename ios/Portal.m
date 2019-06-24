@@ -26,7 +26,7 @@ NSString *strPortalBundle;
 }
 +(void)setModuleBundle{
   NSString *strUrl = @"/UI/api/Native/Config?pageName=Accounts%2FAccountSummary";
-  [HttpServiceHealper get:NULL withURL:strUrl usingBlock:^(NSString *error, NSString *response) {
+  [HttpServiceHealper getPoratal:NULL withURL:strUrl usingBlock:^(NSString *error, NSString *response) {
     if (!error) {
       strModuleBundle = response;
     }
@@ -34,7 +34,7 @@ NSString *strPortalBundle;
 }
 +(void)setPortalbundle{
   NSString *strUrl = @"/UI/api/Native/Bundle?platform=ios";
-  [HttpServiceHealper get:NULL withURL:strUrl usingBlock:^(NSString *error, NSString *response) {
+  [HttpServiceHealper getPoratal:NULL withURL:strUrl usingBlock:^(NSString *error, NSString *response) {
     if (!error) {
       strPortalBundle = response;
     }

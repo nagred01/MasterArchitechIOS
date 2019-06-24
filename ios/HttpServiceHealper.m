@@ -1,6 +1,5 @@
 #import "HttpServiceHealper.h"
-#import <AFNetworking.h>
-#import <AFHTTPSessionManager.h>
+
 
 
 //NSString *str = [[NSUserDefaults standardUserDefaults] valueForKey:@"baseURL"];
@@ -85,6 +84,44 @@ NSString *strUserAgent = @"Mobile IOS 18.1;Mozilla/5.0 (iPhone; CPU iPhone OS 11
   
 }
 
++(NSString *)readResponce:(id)responceObj{
+  NSString *strResponce = [[NSString alloc] initWithData:responceObj encoding:NSUTF8StringEncoding];
+  return strResponce;
+}
++(void)getPoratal:(NSString *)strToken withURL:(NSString *)strURL usingBlock:(void(^)(NSString *error,NSString *response))block{
+  AFHTTPRequestOperationManager *manager = [self getHttpConnection:strToken withURL:strURL];
+  NSString *strBaseURL = [NSString stringWithFormat:@"http://%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"baseURL"]];
+  strBaseURL = [strBaseURL stringByAppendingString:strURL];
+  [manager GET:strBaseURL
+    parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      
+      
+      NSString *string = [self readResponce:responseObject];
+      block(@"",string);
+      
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+      NSLog(@"Error: %@", error);
+    }];
+  
+}
++(AFHTTPRequestOperationManager *)getHttpConnection:(NSString *)strToken withURL:(NSString *)strURL {
+  NSString *strBaseURL = [NSString stringWithFormat:@"http://%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"baseURL"]];
+  strBaseURL = [strBaseURL stringByAppendingString:strURL];
+  
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+  
+  
+  [manager.requestSerializer setValue:strUserAgent forHTTPHeaderField:@"User-Agent"];
+  NSString *strLoginToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"loginToken"];
+  [manager.requestSerializer setValue:strLoginToken forHTTPHeaderField:@"X-CSRF-TOKEN"];
+  if ([strToken length]>0) {
+    [manager.requestSerializer setValue:strToken forHTTPHeaderField:@"X-Request-Token"];
+  }
+  
+  return manager;
+  
+}
 +(void)get:(NSString *)strToken withURL:(NSString *)strURL usingBlock:(void(^)(NSString *error,NSString *response))block {
   
   
