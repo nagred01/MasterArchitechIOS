@@ -48,23 +48,34 @@
 }
 
 -(void)finalStep{
-  NSString *string;
-  NSMutableString *strBundle;
   if(self.btnenabledevMode.isSelected){
-    strBundle = [[NSMutableString alloc] initWithString:[IOHelper readFromFile:(@"index")]];
+   // NSString *string = [[NSMutableString alloc] initWithString:[IOHelper readFromFile:(@"index")]];
+    NSString *string = [IOHelper readFromFile:(@"index")];
+    NSString *path = [[self applicationDocumentsDirectory].path
+                      stringByAppendingPathComponent:@"index.js"];
+    [string writeToFile:path atomically:YES
+                  encoding:NSUTF8StringEncoding error:nil];
+    
+    
+    NSURL *fileURL = [[NSURL alloc] initWithString:path];
+    
+    AppDelegate *appDelegate = (AppDelegate*)(UIApplication.sharedApplication.delegate);
+    [appDelegate gotoReactNativePage:fileURL];
   }else{
-    strBundle = [[NSMutableString alloc] initWithString:[IOHelper readFromFile:(@"index.ios.bundle")]];
+   // strBundle = [[NSMutableString alloc] initWithString:[IOHelper readFromFile:(@"index.ios.bundle")]];
+    NSString *string =[IOHelper readFromFile:(@"index.ios.bundle")];
+    NSString *path = [[self applicationDocumentsDirectory].path
+                      stringByAppendingPathComponent:@"index.js"];
+    [string writeToFile:path atomically:YES
+               encoding:NSUTF8StringEncoding error:nil];
+    
+    
+    NSURL *fileURL = [[NSURL alloc] initWithString:path];
+    
+    AppDelegate *appDelegate = (AppDelegate*)(UIApplication.sharedApplication.delegate);
+    [appDelegate gotoReactNativePage:fileURL];
   }
-  NSString *path = [[self applicationDocumentsDirectory].path
-                    stringByAppendingPathComponent:@"index.js"];
-  [string writeToFile:path atomically:YES
-             encoding:NSUTF8StringEncoding error:nil];
   
-  
-  NSURL *fileURL = [[NSURL alloc] initWithString:path];
-  
-  AppDelegate *appDelegate = (AppDelegate*)(UIApplication.sharedApplication.delegate);
-  [appDelegate gotoReactNativePage:fileURL];
 }
 
 - (IBAction)ActionLogin:(id)sender {
@@ -90,9 +101,14 @@
     if (self.btnenabledevMode.isSelected){
       [self finalStep];
     }else{
-      [Portal doExecute];
-      [self saveFile];
-      [self finalStep];
+      
+      [Portal doExecute:^(NSString *error) {
+        [self saveFile];
+        [self finalStep];
+      }];
+      //[Portal doExecute];
+      
+      
     }
     
     
